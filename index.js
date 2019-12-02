@@ -18,7 +18,10 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  if (cart.length === 1) {
+  if (cart.length === 0) {
+    return "Your shopping cart is empty."
+  }
+  else if (cart.length === 1) {
     var tempString = `In your cart, you have `
     var groceryItem = Object.values(cart[0])
     tempString = concat(tempString + `${groceryItem[0]} at $${groceryItem[1]}.`)
@@ -39,6 +42,7 @@ function viewCart() {
     var groceryItem3 = Object.values(cart[2])
     tempString = concat(tempString + ` and ${groceryItem3[0]} at $${groceryItem3[1]}.`)
   }
+  return tempString
 }
 
 function total() {
