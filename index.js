@@ -31,15 +31,13 @@ function viewCart() {
     tempString = concat(tempString + ` and ${groceryItem2[0]} at $${groceryItem2[1]}.`)
   }
   else {
-    else if (cart.length >= 3) {
-      var tempString = `In your cart, you have `
-      var groceryItem = Object.values(cart[0])
-      tempString = concat(tempString + `${groceryItem[0]} at $${groceryItem[1]},`)
-      var groceryItem2 = Object.values(cart[1])
-      tempString = concat(tempString + ` ${groceryItem2[0]} at $${groceryItem2[1]},`)
-      var groceryItem3 = Object.values(cart[2])
-      tempString = concat(tempString + ` and ${groceryItem3[0]} at $${groceryItem3[1]}.`)
-    }
+    var tempString = `In your cart, you have `
+    var groceryItem = Object.values(cart[0])
+    tempString = concat(tempString + `${groceryItem[0]} at $${groceryItem[1]},`)
+    var groceryItem2 = Object.values(cart[1])
+    tempString = concat(tempString + ` ${groceryItem2[0]} at $${groceryItem2[1]},`)
+    var groceryItem3 = Object.values(cart[2])
+    tempString = concat(tempString + ` and ${groceryItem3[0]} at $${groceryItem3[1]}.`)
   }
 }
 
