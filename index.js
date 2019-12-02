@@ -18,10 +18,17 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  var tempString = `In your cart, you have `
-  for (var i = 0; i < cart.length; i++) {
-    var groceryItem = Object.values(cart[i])
+  if (cart.length === 1) {
+    var tempString = `In your cart, you have `
+    var groceryItem = Object.values(cart[0])
     tempString = concat(tempString + `${groceryItem[0]} at $${groceryItem[1]}.`)
+  }
+  else if (cart.length === 2) {
+    var tempString = `In your cart, you have `
+    for (var i = 0; i < cart.length; i++) {
+      var groceryItem = Object.values(cart[i])
+      tempString = concat(tempString + `${groceryItem[0]} at $${groceryItem[1]}.`)
+    }
   }
 }
 
