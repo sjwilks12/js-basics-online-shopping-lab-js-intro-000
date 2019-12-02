@@ -24,7 +24,7 @@ function viewCart() {
   else if (cart.length === 1) {
     var tempString = `In your cart, you have `
     var groceryItem = Object.values(cart[0])
-    tempString = str.str.str.concat(tempString + `${groceryItem[0]} at $${groceryItem[1]}.`)
+    tempString = str.concat(tempString + `${groceryItem[0]} at $${groceryItem[1]}.`)
   }
   else if (cart.length === 2) {
     var tempString = `In your cart, you have `
