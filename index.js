@@ -21,7 +21,7 @@ function viewCart() {
   var tempString = `In your cart, you have `
   for (var i = 0; i < cart.length; i++) {
     var groceryItem = Object.values(cart[i])
-    tempString = concat(tempString + `${groceryItem[0]} at $${groceryItem[1]}`)
+    tempString = concat(tempString + `${groceryItem[0]} at $${groceryItem[1]}.`)
   }
 }
 
